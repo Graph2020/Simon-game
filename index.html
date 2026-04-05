@@ -4,17 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SVG in Pseudo-element</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
-      @utility btn {
-        @apply px-4 py-2 bg-teal-500 text-white rounded-md cursor-pointer;
+      @theme {
+        --font-title: "Jersey 10", sans-serif;
       }
-      @utility center-elements {
-        @apply flex items-center justify-center;
+      @utility square {
+        @apply size-24 cursor-pointer border-2 border-black rounded-md md:size-32;
       }
     </style>
   </head>
-  <body class="center-elements min-h-screen">
+  <body
+    class="flex items-center justify-center flex-col bg-[#031641] min-h-screen p-3"
+  >
+    <h1
+      class="text-5xl text-amber-200 font-title tracking-wider text-center md:text-6xl"
+    >
+      Press &quot;A&quot; to start the game
+    </h1>
+    <div class="grid grid-cols-2 gap-4 mt-10">
+      <div class="square bg-emerald-500"></div>
+      <div class="square bg-rose-500"></div>
+      <div class="square bg-sky-500"></div>
+      <div class="square bg-yellow-500"></div>
+    </div>
     <!-- javascript -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
