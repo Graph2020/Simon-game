@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "gsap": "^3.14.2"
+  }
+}
