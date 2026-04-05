@@ -1,4 +1,5 @@
 import { nextSequence } from "./utils/game.js";
+import { handleFunction } from "./utils/handleFunc.js";
 const selectedBtn = document.getElementById(nextSequence());
 const audio = new Audio(`./sounds/${selectedBtn.id}.mp3`);
 audio.play();
